@@ -52,8 +52,6 @@ class FedAvgDBE(Server):
             if i%self.eval_gap == 0:
                 print(f"\n-------------Round number: {i}-------------")
                 print("\nEvaluate global model")
-                for client in self.selected_clients:
-                    client.after = False
                 self.evaluate()
 
             for client in self.selected_clients:
@@ -80,5 +78,4 @@ class FedAvgDBE(Server):
         print("\nAverage time cost per round.")
         print(sum(self.Budget[1:])/len(self.Budget[1:]))
 
-        self.save_results()
         self.save_global_model()
