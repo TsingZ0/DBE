@@ -100,6 +100,27 @@ class clientAvgDBE(Client):
     def detach_running(self):
         self.running_mean.detach_()
 
+    def train_metrics(self):
+        trainloader = self.load_train_data()
+        self.model.eval()
+
+        train_num = 0
+        losses = 0
+        with torch.no_grad():
+            for x, y in trainloader:
+                if type(x) == type([]):
+                    x[0] = x[0].to(self.device)
+                else:
+                    x = x.to(self.device)
+                y = y.to(self.device)
+                rep = self.model.base(x)
+                output = self.model.head(rep + self.client_mean)
+                loss = self.loss(output, y)
+                train_num += y.shape[0]
+                losses += loss.item() * y.shape[0]
+
+        return losses, train_num
+
     def test_metrics(self):
         testloaderfull = self.load_test_data()
         self.model.eval()

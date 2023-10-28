@@ -51,7 +51,7 @@ class FedAvgDBE(Server):
 
             if i%self.eval_gap == 0:
                 print(f"\n-------------Round number: {i}-------------")
-                print("\nEvaluate global model")
+                print("\nEvaluate model")
                 self.evaluate()
 
             for client in self.selected_clients:
@@ -72,10 +72,9 @@ class FedAvgDBE(Server):
                 break
 
         print("\nBest accuracy.")
-        # self.print_(max(self.rs_test_acc), max(
-        #     self.rs_train_acc), min(self.rs_train_loss))
         print(max(self.rs_test_acc))
         print("\nAverage time cost per round.")
         print(sum(self.Budget[1:])/len(self.Budget[1:]))
 
+        self.save_results()
         self.save_global_model()
