@@ -2,6 +2,8 @@
 
 This is the implementation of our paper *Eliminating Domain Bias for Federated Learning in Representation Space* (accepted by NeurIPS 2023). We show the code of the representative FedAvg+DBE (`FedAvgDBE`). 
 
+- [[NeurIPS] DBE.pptx](./[NeurIPS]%20DBE.pptx)
+
 
 # Dataset
 
