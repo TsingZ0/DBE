@@ -3,6 +3,7 @@
 This is the implementation of our paper *[Eliminating Domain Bias for Federated Learning in Representation Space](https://arxiv.org/abs/2311.14975)* (accepted by NeurIPS 2023). It can improve bi-directional knowledge transfer between the server and clients. We show the code of the representative FedAvg+DBE (`FedAvgDBE`). 
 
 - [[NeurIPS] DBE.pptx](./[NeurIPS]%20DBE.pptx)
+- [DBEPoster.pdf](./DBEPoster.pdf)
 
 
 # Dataset
