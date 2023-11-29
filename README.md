@@ -4,7 +4,19 @@ This is the implementation of our paper *[Eliminating Domain Bias for Federated 
 
 - [[NeurIPS] DBE.pptx](./[NeurIPS]%20DBE.pptx)
 - [DBEPoster.pdf](./DBEPoster.pdf)
+- 
+**Citation**
 
+```
+@inproceedings{
+  zhang2023eliminating,
+  title={Eliminating Domain Bias for Federated Learning in Representation Space},
+  author={Jianqing Zhang and Yang Hua and Jian Cao and Hao Wang and Tao Song and Zhengui XUE and Ruhui Ma and Haibing Guan},
+  booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+  year={2023},
+  url={https://openreview.net/forum?id=nO5i1XdUS0}
+}
+```
 
 # Dataset
 
