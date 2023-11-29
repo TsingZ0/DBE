@@ -8,7 +8,7 @@ This is the implementation of our paper *[Eliminating Domain Bias for Federated 
 
 # Dataset
 
-Due to the file size limitation, we only upload the fmnist dataset with the default practical setting ($\beta=0.1$). Please refer to our project [PFL-Non-IID](https://github.com/TsingZ0/PFL-Non-IID). 
+Due to the file size limitation, we only upload the fmnist dataset with the default practical setting ($\beta=0.1$). Please refer to our project [PFLlib](https://github.com/TsingZ0/PFLlib). 
 
 
 # System (based on PFL-Non-IID)
