@@ -17,7 +17,6 @@ from flcore.trainmodel.bilstm import *
 from flcore.trainmodel.resnet import *
 from flcore.trainmodel.alexnet import *
 from flcore.trainmodel.mobilenet_v2 import *
-from flcore.trainmodel.transformer import *
 
 from utils.result_utils import average_data
 from utils.mem_utils import MemReporter
@@ -117,10 +116,6 @@ def run(args):
 
         elif model_str == "TextCNN":
             args.model = TextCNN(hidden_dim=emb_dim, max_len=max_len, vocab_size=vocab_size, 
-                            num_classes=args.num_classes).to(args.device)
-
-        elif model_str == "Transformer":
-            args.model = TransformerModel(ntoken=vocab_size, d_model=emb_dim, nhead=8, d_hid=emb_dim, nlayers=2, 
                             num_classes=args.num_classes).to(args.device)
         
         elif model_str == "AmazonMLP":
