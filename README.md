@@ -5,7 +5,7 @@ This is the implementation of our paper *[Eliminating Domain Bias for Federated 
 - [[NeurIPS] DBE.pptx](./[NeurIPS]%20DBE.pptx)
 - [DBEPoster.pdf](./DBEPoster.pdf)
 
-**Takeaway**: Eliminating domain bias for the feature extractor part resolves the issue of catastrophic forgetting during local training. 
+**Takeaway**: By eliminating domain bias in the feature extractor, we address catastrophic forgetting during local training, enhancing the generalization ability. Consequently, the global module can swiftly adapt to a new client. 
 
 **Citation**
 
