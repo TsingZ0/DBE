@@ -10,8 +10,7 @@ This is the implementation of our paper *[Eliminating Domain Bias for Federated 
 **Citation**
 
 ```
-@inproceedings{
-  zhang2023eliminating,
+@inproceedings{zhang2023eliminating,
   title={Eliminating Domain Bias for Federated Learning in Representation Space},
   author={Jianqing Zhang and Yang Hua and Jian Cao and Hao Wang and Tao Song and Zhengui XUE and Ruhui Ma and Haibing Guan},
   booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
