@@ -9,7 +9,7 @@ import numpy as np
 import torchvision
 import logging
 
-from flcore.servers.serveravgDBE import FedAvgDBE
+from flcore.servers.serverDBE import FedDBE
 
 from flcore.trainmodel.models import *
 
@@ -133,11 +133,11 @@ def run(args):
         print(args.model)
 
         # select algorithm
-        if args.algorithm == "FedAvgDBE":
+        if args.algorithm == "FedDBE":
             args.head = copy.deepcopy(args.model.fc)
             args.model.fc = nn.Identity()
             args.model = BaseHeadSplit(args.model, args.head)
-            server = FedAvgDBE(args, i)
+            server = FedDBE(args, i)
             
         else:
             raise NotImplementedError
@@ -212,7 +212,7 @@ if __name__ == "__main__":
                         help="Whether to group and select clients at each round according to time cost")
     parser.add_argument('-tth', "--time_threthold", type=float, default=10000,
                         help="The threthold for droping slow clients")
-    # FedAvgDBE
+    # FedDBE
     parser.add_argument('-mo', "--momentum", type=float, default=0.1)
     parser.add_argument('-klw', "--kl_weight", type=float, default=0.0)
 

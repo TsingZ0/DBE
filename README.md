@@ -1,6 +1,6 @@
 # Introduction
 
-This is the implementation of our paper *[Eliminating Domain Bias for Federated Learning in Representation Space](https://arxiv.org/abs/2311.14975)* (accepted by NeurIPS 2023). It can improve bi-directional knowledge transfer between the server and clients. We show the code of the representative FedAvg+DBE (`FedAvgDBE`). 
+This is the implementation of our paper *[Eliminating Domain Bias for Federated Learning in Representation Space](https://arxiv.org/abs/2311.14975)* (accepted by NeurIPS 2023). It can improve bi-directional knowledge transfer between the server and clients. We show the code of the representative FedAvg+DBE (`FedDBE`). 
 
 - [[NeurIPS] DBE.pptx](./[NeurIPS]%20DBE.pptx)
 - [DBEPoster.pdf](./DBEPoster.pdf)
@@ -26,12 +26,12 @@ Due to the file size limitation, we only upload the fmnist dataset with the defa
 
 # System (based on PFL-Non-IID)
 
-- `main.py`: configurations of **FedAvgDBE**. 
-- `run_me.sh`: command lines to start **FedAvgDBE**. 
-- `env_linux.yaml`: python environment to run **FedAvgDBE** on Linux. 
+- `main.py`: configurations of **FedDBE**. 
+- `run_me.sh`: command lines to start **FedDBE**. 
+- `env_linux.yaml`: python environment to run **FedDBE** on Linux. 
 - `./flcore`: 
-    - `./clients/clientAvgDBE.py`: the code on the client. 
-    - `./servers/serverAvgDBE.py`: the code on the server. 
+    - `./clients/clientDBE.py`: the code on the client. 
+    - `./servers/serverDBE.py`: the code on the server. 
     - `./trainmodel/models.py`: the code for models. 
 - `./utils`:
     - `data_utils.py`: the code to read the dataset. 
@@ -47,7 +47,7 @@ conda env create -f env_cuda_latest.yaml # for Linux
 
 ## Training and Evaluation
 
-All codes corresponding to **FedAvgDBE** are stored in `./system`. Just run the following commands.
+All codes corresponding to **FedDBE** are stored in `./system`. Just run the following commands.
 
 ```
 cd ./system
